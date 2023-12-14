@@ -3,24 +3,29 @@ package com.example.Lab2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class Lab2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Lab2Application.class, args);
 
-		final int n = 5;
-		int[] an = {1, 2, 3, 4, 5};
-		int[] bn = {6, 7, 8, 9};
+		int[] coefs1 = {1, 2, 3, 4, 5};
+		int[] numerators1 = {1, 1, 1, 1};
+		ContinuedFractionBuilder builder1 = new ContinuedFractionBuilder1();
+		ContinuedFractionDirector director = new ContinuedFractionDirector();
+		ContinuedFractionComposite continuedFraction1 = director.build(builder1, coefs1, numerators1);
 
-		Builder builder = new FractionBuilder();
-		builder.buildFraction(n, an, null);
-		Component fraction = builder.getFraction();
-		System.out.println(fraction.print());
+		System.out.println(continuedFraction1.print());
 
-		builder.buildFraction(n, an, bn);
-		fraction = builder.getFraction();
-		System.out.println(fraction.print());
+		int[] integers = {1, 2, 3, 4, 5};
+		int[] numerators = {6, 7, 8, 9};
+		ContinuedFractionBuilder builder = new ContinuedFractionBuilder2();
+		ContinuedFractionDirector director2 = new ContinuedFractionDirector();
+		ContinuedFractionComposite continuedFraction2 = director2.build(builder, integers, numerators);
+
+		// Print the continued fraction
+		System.out.println(continuedFraction2.print());
+
 	}
-
 }
