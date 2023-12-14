@@ -3,11 +3,11 @@ package com.example.Lab2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContinuedFractionComposite implements FractionComponent{
+public class ContinuedComposite implements Component {
 
-    private final List<FractionComponent> components = new ArrayList<>();
+    private final List<Component> components = new ArrayList<>();
 
-    public void addComponent(FractionComponent component) {
+    public void addComponent(Component component) {
         components.add(component);
     }
 

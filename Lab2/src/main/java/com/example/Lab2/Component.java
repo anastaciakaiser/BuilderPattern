@@ -1,5 +1,5 @@
 package com.example.Lab2;
 
-public interface FractionComponent {
+public interface Component {
     String print();
 }

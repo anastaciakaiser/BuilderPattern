@@ -1,9 +1,9 @@
 package com.example.Lab2;
-public class FractionLeaf implements FractionComponent{
+public class Leaf implements Component {
 
     private final int value;
 
-    public FractionLeaf(int value) {
+    public Leaf(int value) {
         this.value = value;
     }
 

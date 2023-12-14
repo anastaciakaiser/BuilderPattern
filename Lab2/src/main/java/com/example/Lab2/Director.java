@@ -1,7 +1,7 @@
 package com.example.Lab2;
 
-public class ContinuedFractionDirector {
-    public ContinuedFractionComposite build(ContinuedFractionBuilder builder, int[] integers, int[] numerators) {
+public class Director {
+    public ContinuedComposite build(Builder builder, int[] integers, int[] numerators) {
         if (integers.length != numerators.length + 1) {
             throw new IllegalArgumentException("Invalid input arrays: lengths do not match.");
         }
